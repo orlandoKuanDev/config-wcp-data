@@ -9,7 +9,7 @@ spring:
     name: service-auth
   datasource:
     password: orlando123
-    url: jdbc:postgresql:market_ms
+    url: jdbc:postgresql:wcp
     username: postgres
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
