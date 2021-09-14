@@ -8,7 +8,7 @@ spring:
   application:
     name: service-auth
   datasource:
-    password: orlando123
+    password: postgres
     url: jdbc:postgresql:wcp
     username: postgres
   jpa:
