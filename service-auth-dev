@@ -8,14 +8,29 @@ spring:
   application:
     name: service-auth
   datasource:
-      password: orlando123
-      url: jdbc:postgresql:market_ms
-      username: postgres
+    password: orlando123
+    url: jdbc:postgresql:market_ms
+    username: postgres
   jpa:
-      database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
 app:
-    jwt:
-        expiration: 900000
-        header: Authorization
-        header.prefix: 'Bearer '
-        secret: mySecret
+  jwt:
+    expiration: 900000
+    header: Authorization
+    header.prefix: 'Bearer '
+    secret: mySecret
+  cache:
+    logoutToken:
+      maxSize: 1000
+  token:
+    email:
+      verification:
+        duration: 3600000
+    password:
+      reset:
+        duration: 3600000
+    refresh:
+      duration: 2592000000
+  velocity:
+    templates:
+      location: /templates/
