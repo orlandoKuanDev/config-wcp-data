@@ -13,3 +13,9 @@ spring:
       username: postgres
   jpa:
       database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+app:
+    jwt:
+        expiration: 900000
+        header: Authorization
+        header.prefix: 'Bearer '
+        secret: mySecret
